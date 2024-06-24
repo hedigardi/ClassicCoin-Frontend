@@ -1,0 +1,182 @@
+/* App.scss */
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Colors */
+$brown: #a0937d;
+$brown-light: #e7d4b5;
+$beige: #f6e6cb;
+$green-light: #b6c7aa;
+$maroon: #973131;
+$bg-sky-950: #082f49;
+$bg-sky-800: #075985;
+$bg-sky-500: #0ea5e9;
+$bg-sky-300: #7dd3fc;
+$bg-sky-200: #bae6fd;
+$bg-sky-100: #e0f2fe;
+$bg-sky-50: #f0f9ff;
+$bg-yellow-200: #fef08a;
+$bg-yellow-100: #fef9c3;
+$bg-amber-500: #f59e0b;
+$bg-amber-300: #fcd34d;
+
+/* Base styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  flex-grow: 1;
+  background-color: $brown-light;
+}
+
+/* Header styles */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header {
+  background-color: $brown;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: $beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Other styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page {
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.page-title {
+  margin-bottom: 1.5rem;
+}
+
+.wallet-info {
+  border: solid 1px #fff;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.wallet-info div {
+  word-wrap: break-word;
+  color: #c7c724;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: $brown-light;
+}
+
+.blockT {
+  border: solid 1px $brown;
+  padding: 1rem;
+  background: $green-light;
+  word-wrap: break-word;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  color: $bg-sky-950;
+}
+
+.block-text {
+  font-weight: bold;
+}
+
+.transaction-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  font-weight: bold;
+  color: $maroon;
+}
