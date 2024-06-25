@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginRequest } from '../services/apiService';
+import { signinRequest } from '../services/apiService';
 import { NavLink } from 'react-router-dom';
 import ErrorModal from '../components/ErrorModal';
 import SuccessModal from '../components/SuccessModal';
 import logoImage from '../assets/img/logo_color.png';
 
-export const Login = () => {
+export const Signin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
@@ -25,9 +25,9 @@ export const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await loginRequest(email, password);
+    const response = await signinRequest(email, password);
     if (response.error) {
-      setErrorMsg('Login unsuccessful! Please try again.');
+      setErrorMsg('Sign in unsuccessful! Please try again.');
       setError(true);
       return;
     } else {
@@ -37,7 +37,7 @@ export const Login = () => {
       localStorage.setItem('Bearer', token);
       localStorage.setItem('loggedInUser', JSON.stringify({ email }));
       setLoggedInUser({ email });
-      navigate('/login');
+      navigate('/signin');
     }
   };
 
@@ -45,7 +45,7 @@ export const Login = () => {
     setLoggedInUser(null);
     localStorage.removeItem('Bearer');
     localStorage.removeItem('loggedInUser');
-    navigate('/login');
+    navigate('/signin');
   };
 
   return (
@@ -133,16 +133,6 @@ export const Login = () => {
                   </button>
                 </div>
               </form>
-
-              <p className="mt-10 text-center text-sm">
-                Need a Wallet?{' '}
-                <NavLink
-                  to={'/register'}
-                  className="links"
-                >
-                  Sign Up Here!
-                </NavLink>
-              </p>
             </div>
           )}
 

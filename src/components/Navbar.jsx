@@ -58,7 +58,7 @@ export const Navbar = () => {
           </div>
           <div className="flex-grow">
             <NavLink
-              to={'/login'}
+              to={'/signin'}
               className="flex items-center justify-center text-sm font-semibold leading-6 text-gray-900"
             >
               Sign In
@@ -66,7 +66,7 @@ export const Navbar = () => {
           </div>
           <div className="flex-grow">
             <NavLink
-              to={'/register'}
+              to={'/signup'}
               className="flex items-center justify-center text-sm font-semibold leading-6 text-gray-900"
             >
               Sign Up
@@ -124,13 +124,13 @@ export const Navbar = () => {
                   Transact
                 </NavLink>
                 <NavLink
-                  to={'/login'}
+                  to={'/signin'}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Sign In
                 </NavLink>
                 <NavLink
-                  to={'/register'}
+                  to={'/signup'}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Sign Up

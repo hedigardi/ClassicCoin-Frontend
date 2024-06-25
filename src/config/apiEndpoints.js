@@ -1,8 +1,8 @@
 const baseURL = 'http://localhost:5001/api/v1';
 
 export const endpoint = {
-  login: `${baseURL}/wallet/signin`,
-  register: `${baseURL}/wallet/signup`,
+  signin: `${baseURL}/wallet/signin`,
+  signup: `${baseURL}/wallet/signup`,
 
   AddTransaction: `${baseURL}/wallet/transaction`,
   GetTransaction: `${baseURL}/wallet/transactions`,

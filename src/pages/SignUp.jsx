@@ -5,7 +5,7 @@ import ErrorModal from '../components/ErrorModal';
 import SuccessModal from '../components/SuccessModal';
 import logoImage from '../assets/img/logo_color.png';
 
-export const Register = () => {
+export const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,12 +25,17 @@ export const Register = () => {
     const response = await createAccount({ name, email, password, role });
     if (response.error) {
       setError(true);
-      return;
     } else {
-      setSuccessMsg('Wallet created successfully!');
+      setSuccessMsg('Congratulations! Your wallet is now ready!');
       setSuccess(true);
       const token = JSON.stringify(response.token);
       localStorage.setItem('Bearer', token);
+
+      setName('');
+      setEmail('');
+      setPassword('');
+      setRole('');
+      e.target.reset();
     }
   };
 
@@ -150,20 +155,10 @@ export const Register = () => {
                   type="submit"
                   className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] rounded-full"
                 >
-                  Create wallet
+                  Sign up
                 </button>
               </div>
             </form>
-
-            <p className="mt-10 text-center text-sm">
-              Have a wallet?{' '}
-              <NavLink
-                to={'/login'}
-                className="links"
-              >
-                Sign In Here!
-              </NavLink>
-            </p>
           </div>
         </div>
       </div>
