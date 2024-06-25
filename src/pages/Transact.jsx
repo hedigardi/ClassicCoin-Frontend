@@ -113,6 +113,9 @@ export const Transact = () => {
                   Submit Transaction
                 </button>
               </div>
+              <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                Mine a new Block
+              </h2>
               <MineButton />
             </form>
           </div>

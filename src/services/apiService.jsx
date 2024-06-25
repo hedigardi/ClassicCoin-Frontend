@@ -17,7 +17,7 @@ const fetchData = async (url, options) => {
 };
 
 export const createAccount = ({ name, email, password, role }) => {
-  return fetchData(endpoint.register, {
+  return fetchData(endpoint.signup, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -44,8 +44,8 @@ export const fetchTransactions = () => {
   });
 };
 
-export const loginRequest = (email, password) => {
-  return fetchData(endpoint.login, {
+export const signinRequest = (email, password) => {
+  return fetchData(endpoint.signin, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
