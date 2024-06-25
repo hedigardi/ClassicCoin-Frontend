@@ -1,8 +1,20 @@
-# React + Vite
+# Classic Coin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+This project involves developing the frontend for a fictional cryptocurrency blockchain. It includes features for listing blocks, creating and mining transactions, as well as user login and registration functionalities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/hedigardi/ClassicCoin-Frontend.git
+   ```
+2. Install the dependencies:
+   ```sh
+   npm i
+   ```
+3. Start the application:
+   ```sh
+   npm run dev
+   ```
